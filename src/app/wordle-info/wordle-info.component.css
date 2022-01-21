@@ -1,0 +1,25 @@
+.main-component {
+    height: 35vh;
+    width: 27vw;
+    margin: 3em;
+    float: left;
+    margin-top: 10vh;
+}
+
+.correct-pos-div {
+    margin: 4em 2em 2em 2em;
+}
+
+input[type="text"] {
+    width: 4.2vw;
+    margin: 0 0.2vw 0 0.2vw;
+    font-size: 9vh;
+    text-transform: uppercase;
+    caret-color: transparent;
+}
+
+.inputChar {
+    margin: 3em;
+    width: 21vw;
+    height: 19vh;
+}
