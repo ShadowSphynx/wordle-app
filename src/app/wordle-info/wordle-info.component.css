@@ -1,25 +1,53 @@
 .main-component {
     height: 35vh;
     width: 27vw;
-    margin: 3em;
+    margin: 3vh 3vw 3vh 3vw;
     float: left;
     margin-top: 10vh;
 }
 
 .correct-pos-div {
-    margin: 4em 2em 2em 2em;
+    margin-left: 2vw;
+    width: 90%;
+    height: 65%;
 }
 
 input[type="text"] {
     width: 4.2vw;
     margin: 0 0.2vw 0 0.2vw;
-    font-size: 9vh;
+    font-size: 5em;
     text-transform: uppercase;
     caret-color: transparent;
 }
 
 .inputChar {
-    margin: 3em;
+    margin-left: 3vw;
     width: 21vw;
-    height: 19vh;
+    height: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .main-component {
+        height: 20vh;
+        width: 44vw;
+        margin: 3vh 3vw 3vh 3vw;
+        float: left;
+        margin-top: 5vh;
+    }
+
+    input[type="text"]{
+        width: 7.2vw;
+        height: 6vh;
+        margin: 2vh 0.3vw 0 0.3vw;
+        font-size: 2em;
+    }
+
+    .inputChar {
+        width: 87vw;
+    }
+
+    .textComponent {
+        width: 94vw;
+    }
 }

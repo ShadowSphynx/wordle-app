@@ -23,7 +23,7 @@ export class WordleInfoComponent {
 
   sendData() {
     if(this.showTextArea) {
-      this.alphabets = this.textAreaData.split(' ');
+      this.alphabets = this.textAreaData.trim().split(' ');
     }
     this.sendDataEvent.emit(this.alphabets);
   }

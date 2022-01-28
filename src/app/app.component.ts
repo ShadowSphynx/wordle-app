@@ -66,14 +66,16 @@ export class AppComponent {
 
   excludedAlphabets(data: Array<string>) {
     this.wordsExcludingAlphabet = data;
+    this.wordsExcludingAlphabet = this.wordsExcludingAlphabet.filter( ( el ) => !this.wordsIncludingAlphabet.includes( el ) );
+    this.wordsExcludingAlphabet = this.wordsExcludingAlphabet.filter( ( el ) => !this.wordsCorrectPositionAlphabet.includes( el ) );
     this.getWords();
   }
 
   getWords() {
     this.requiredWords = words.filter(d => d.length == 5);
-    this.requiredWords = this.getWordsExcludingAlphabets();
     this.requiredWords = this.getWordsIncludingAlphabets();
     this.requiredWords = this.getWordsInAlphabetPositions();
     this.requiredWords = this.getWordsNotInAlphabetPositions();
+    this.requiredWords = this.getWordsExcludingAlphabets();
   }
 }

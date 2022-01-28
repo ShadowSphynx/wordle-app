@@ -1,10 +1,10 @@
-<div class="main-component" [ngStyle]="{'background-color':colour}">
-    <h1 style="text-align: center; font-size: 1.5em; color: #d7dadc;">{{heading}}</h1>
+<div class="main-component" [ngClass]="showTextArea ? 'textComponent' : 'inputComponent'" [ngStyle]="{'background-color':colour}">
+    <h1 style="text-align: center; font-size: 1.5em; color: #d7dadc;height: 25%;">{{heading}}</h1>
 
     <div class="correct-pos-div" *ngIf="!showTextArea">
         <div *ngFor='let in of counter(5) ;let i = index' style="float: left;">
-            <input type="text" maxlength="1" size="1" [(ngModel)]="alphabets[i]" (change)="sendData()">
+            <input type="text" maxlength="1" size="1" [(ngModel)]="alphabets[i]" (ngModelChange)="sendData()">
         </div>
     </div>
-    <textarea class="inputChar" *ngIf="showTextArea" [(ngModel)]="textAreaData" (change)="sendData()"></textarea>
+    <textarea class="inputChar" *ngIf="showTextArea" [(ngModel)]="textAreaData" (ngModelChange)="sendData()"></textarea>
 </div>

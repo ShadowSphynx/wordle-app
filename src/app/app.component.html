@@ -1,4 +1,4 @@
-<h1 class="display-1" style="text-align: center; font-size: 4em; color: #d7dadc;">Wordle Helper</h1>
+<h1 class="display-1" style="text-align: center; font-size: 4em; color: #d7dadc; width: 100%;">Wordle Helper</h1>
 <app-wordle-info [showTextArea]=false colour="#538d4e" heading="Alphabets in Correct Position" (sendDataEvent)="correctPosition($event)"></app-wordle-info>
 <app-wordle-info [showTextArea]=false colour="#b49f3a" heading="Alphabets that exist in the word" (sendDataEvent)="wrongPosition($event)"></app-wordle-info>
 <app-wordle-info [showTextArea]=true colour="#3a3a3c" heading="Alphabets that don't exist in  the word" (sendDataEvent)="excludedAlphabets($event)"></app-wordle-info>
