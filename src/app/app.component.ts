@@ -22,13 +22,13 @@ export class AppComponent {
 
   getWordsIncludingAlphabets() {
     return this.requiredWords.filter(word => {
-      return this.wordsIncludingAlphabet.every( character => word.includes(character)
+      return this.wordsIncludingAlphabet.every( character => word.includes(character.toLowerCase())
     )});
   }
   
   getWordsExcludingAlphabets() {
     return this.requiredWords.filter(word => {
-      return this.wordsExcludingAlphabet.every( character => !word.includes(character)
+      return this.wordsExcludingAlphabet.every( character => !word.includes(character.toLowerCase())
     )});
   }
   
@@ -36,7 +36,7 @@ export class AppComponent {
     return this.requiredWords.filter(word => {
       let flag = true;
       this.wordsCorrectPositionAlphabet.forEach((val, index) => {
-        flag = flag && (val ? word.indexOf(val) == index : true);
+        flag = flag && (val ? word.indexOf(val.toLowerCase()) == index : true);
       })
       return flag;
     });
@@ -46,7 +46,7 @@ export class AppComponent {
     return this.requiredWords.filter(word => {
       let flag = true;
       this.wordsWrongPositionAlphabet.forEach((val, index) => {
-        flag = flag && (val ? word.indexOf(val) != index : true);
+        flag = flag && (val ? word.indexOf(val.toLowerCase()) != index : true);
       })
       return flag;
     });
